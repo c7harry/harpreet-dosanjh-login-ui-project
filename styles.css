@@ -6,7 +6,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-image: url('images/login.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,28 +36,52 @@ header {
 }
 
 .login-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
     text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .login-logo {
     max-width: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #0F2D52;
+}
+
+.input-group input {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px;
+    padding: 10px 10px 10px 35px;
     border: 2px solid #0F2D52;
     border-radius: 4px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .login-box input[type="submit"] {
@@ -76,17 +100,46 @@ header {
     background-color: #DAA900;
 }
 
-.login-box a {
-    display: inline-block;
-    margin-top: 10px;
-    color: white;
-    text-decoration: none;
+.signup-button {
+    display: block;
+    margin-top: 15px;
     padding: 10px;
+    background-color: transparent;
+    color: #0F2D52;
+    border: 2px solid #0F2D52;
     border-radius: 4px;
-    background-color: #0F2D52;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.login-box a:hover {
-    background-color: #DAA900;
+.signup-button:hover {
+    background-color: #0F2D52;
+    color: white;
+}
+
+.login-footer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.login-footer a {
+    color: #0F2D52;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .login-logo {
+        max-width: 80px;
+    }
 }

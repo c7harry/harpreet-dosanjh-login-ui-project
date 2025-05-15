@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harpreet Dosanjh Login UI Project</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,19 +24,26 @@
     <div class="centered-content">
         <div class="login-box">
             <img src="images/bobcat-icon.png" alt="Logo" class="login-logo">
-            
+
             <form method="post">
-                <p>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
                     <input type="text" name="username" placeholder="Username" />
-                </p>
-                <p>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
                     <input type="password" name="password" placeholder="Password" />
-                </p>
+                </div>
                 <p>
                     <input type="submit" value="Login" />
                 </p>
             </form>
-            <a href="#">Don't have an account? Click here</a>
+
+            <a href="#" class="signup-button">Don't have an account? Sign up</a>
+
+            <div class="login-footer">
+                <a href="#">Forgot password?</a> · <a href="#">Help</a>
+            </div>
         </div>
     </div>
 </body>
