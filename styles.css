@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -11,15 +15,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Center content using flexbox */
-.centered-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 75vh;
-}
-
-/* Header styling */
 header {
     display: flex;
     align-items: center;
@@ -33,31 +28,34 @@ header {
     height: 75px;
 }
 
-/* Login box container */
-.container.login-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
 }
 
-/* Input fields */
-form input[type="text"],
-form input[type="password"] {
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 15px;
     border: 2px solid #0F2D52;
     border-radius: 4px;
-    box-sizing: border-box;
     font-size: 1rem;
 }
 
-/* Submit button */
-form input[type="submit"] {
+.login-box input[type="submit"] {
     width: 100%;
     background-color: #0F2D52;
     color: white;
@@ -66,15 +64,14 @@ form input[type="submit"] {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-form input[type="submit"]:hover {
+.login-box input[type="submit"]:hover {
     background-color: #DAA900;
 }
 
-/* Registration link */
-.container a {
+.login-box a {
     display: inline-block;
     margin-top: 10px;
     color: white;
@@ -85,6 +82,6 @@ form input[type="submit"]:hover {
     transition: background-color 0.3s;
 }
 
-.container a:hover {
+.login-box a:hover {
     background-color: #DAA900;
 }
