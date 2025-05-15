@@ -45,6 +45,11 @@ header {
     text-align: center;
 }
 
+.login-logo {
+    max-width: 100px;
+    margin-bottom: 0px;
+}
+
 .login-box input[type="text"],
 .login-box input[type="password"] {
     width: 100%;
