@@ -4,15 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harpreet Dosanjh Login UI Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-box">
+    <header>
+        <a href="#">
+            <img src="images/headertext.png" alt="Header Text" class="header-text">
+        </a>
+    </header>
+
+    <div class="centered-content">
+        <div class="container login-box">
             <h2>Login</h2>
-            <input type="text" placeholder="Username" class="input-field" />
-            <input type="password" placeholder="Password" class="input-field" />
-            <button class="login-button">Login</button>
+            <form method="post">
+                <p>
+                    <input type="text" name="username" placeholder="Username" />
+                </p>
+                <p>
+                    <input type="password" name="password" placeholder="Password" />
+                </p>
+                <p>
+                    <input type="submit" value="Login" />
+                </p>
+            </form>
+            <a href="#">Don't have an account? Click here</a>
         </div>
     </div>
 </body>
